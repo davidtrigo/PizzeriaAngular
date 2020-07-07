@@ -5,8 +5,13 @@ import { UserGuardService } from 'projects/pizzeria/user';  //incorrecto?
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('projects/ingredients/src/app/ingredients.module').then(m => m.IngredientsModule),
+    loadChildren: () => import('projects/pizzas/src/app/pizzas.module').then(m => m.PizzasModule),
   },
+  {
+    path: 'pizzas',
+    loadChildren: () => import('projects/pizzas/src/app/pizzas.module').then(m => m.PizzasModule),
+  },
+
   {
     path: 'ingredients',
     loadChildren: () => import('projects/ingredients/src/app/ingredients.module').then(m => m.IngredientsModule),
