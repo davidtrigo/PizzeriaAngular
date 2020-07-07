@@ -14,7 +14,21 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@pizzeria/validators": [
+        "dist/pizzeria/validators/pizzeria-validators",
+        "dist/pizzeria/validators"
+      ],
+      "@pizzeria/core": [
+        "dist/pizzeria/core/pizzeria-core",
+        "dist/pizzeria/core"
+      ],
+      "@pizzeria/user": [
+        "dist/pizzeria/user/pizzeria-user",
+        "dist/pizzeria/user"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

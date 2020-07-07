@@ -119,6 +119,126 @@
           }
         }
       }
+    },
+    "@pizzeria/validators": {
+      "projectType": "library",
+      "root": "projects/pizzeria/validators",
+      "sourceRoot": "projects/pizzeria/validators/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/pizzeria/validators/tsconfig.lib.json",
+            "project": "projects/pizzeria/validators/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/pizzeria/validators/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pizzeria/validators/src/test.ts",
+            "tsConfig": "projects/pizzeria/validators/tsconfig.spec.json",
+            "karmaConfig": "projects/pizzeria/validators/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/pizzeria/validators/tsconfig.lib.json",
+              "projects/pizzeria/validators/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@pizzeria/core": {
+      "projectType": "library",
+      "root": "projects/pizzeria/core",
+      "sourceRoot": "projects/pizzeria/core/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/pizzeria/core/tsconfig.lib.json",
+            "project": "projects/pizzeria/core/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/pizzeria/core/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pizzeria/core/src/test.ts",
+            "tsConfig": "projects/pizzeria/core/tsconfig.spec.json",
+            "karmaConfig": "projects/pizzeria/core/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/pizzeria/core/tsconfig.lib.json",
+              "projects/pizzeria/core/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@pizzeria/user": {
+      "projectType": "library",
+      "root": "projects/pizzeria/user",
+      "sourceRoot": "projects/pizzeria/user/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/pizzeria/user/tsconfig.lib.json",
+            "project": "projects/pizzeria/user/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/pizzeria/user/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pizzeria/user/src/test.ts",
+            "tsConfig": "projects/pizzeria/user/tsconfig.spec.json",
+            "karmaConfig": "projects/pizzeria/user/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/pizzeria/user/tsconfig.lib.json",
+              "projects/pizzeria/user/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "pizzeria"
 }
