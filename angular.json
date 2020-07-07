@@ -239,6 +239,123 @@
           }
         }
       }
+    },
+    "ingredients": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/ingredients",
+      "sourceRoot": "projects/ingredients/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ingredients",
+            "index": "projects/ingredients/src/index.html",
+            "main": "projects/ingredients/src/main.ts",
+            "polyfills": "projects/ingredients/src/polyfills.ts",
+            "tsConfig": "projects/ingredients/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/ingredients/src/favicon.ico",
+              "projects/ingredients/src/assets"
+            ],
+            "styles": [
+              "projects/ingredients/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ingredients/src/environments/environment.ts",
+                  "with": "projects/ingredients/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ingredients:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ingredients:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ingredients:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ingredients/src/test.ts",
+            "polyfills": "projects/ingredients/src/polyfills.ts",
+            "tsConfig": "projects/ingredients/tsconfig.spec.json",
+            "karmaConfig": "projects/ingredients/karma.conf.js",
+            "assets": [
+              "projects/ingredients/src/favicon.ico",
+              "projects/ingredients/src/assets"
+            ],
+            "styles": [
+              "projects/ingredients/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ingredients/tsconfig.app.json",
+              "projects/ingredients/tsconfig.spec.json",
+              "projects/ingredients/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/ingredients/e2e/protractor.conf.js",
+            "devServerTarget": "ingredients:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ingredients:serve:production"
+            }
+          }
+        }
+      }
     }},
   "defaultProject": "pizzeria"
 }
