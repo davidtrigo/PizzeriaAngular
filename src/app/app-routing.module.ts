@@ -1,27 +1,27 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { UserGuardService } from 'projects/pizzeria/user';  //incorrecto?
+import { UserGuardService } from '@pizzeria/user';
 
 const routes: Routes = [
-  {
+ /* {
     path: '',
-    loadChildren: () => import('projects/pizzas/src/app/pizzas.module').then(m => m.PizzasModule),
+    loadChildren: () => import('projects/pizzas').then(m => m.PizzasSharedModule),
   },
   {
     path: 'pizzas',
-    loadChildren: () => import('projects/pizzas/src/app/pizzas.module').then(m => m.PizzasModule),
-  },
+    loadChildren: () => import('projects/pizzas').then(m => m.PizzasSharedModule),
+  },*/
 
   {
     path: 'ingredients',
-    loadChildren: () => import('projects/ingredients/src/app/ingredients.module').then(m => m.IngredientsModule),
+    loadChildren: () => import('projects/ingredients').then(m => m.IngredientsSharedModule),
     canActivate: [UserGuardService],
     data: { role: 'admin' }
   }, 
-  {
+  /*{
     path: '**',
     redirectTo: '/'
-  }
+  }*/
 
 ];
 

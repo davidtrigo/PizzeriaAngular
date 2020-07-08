@@ -1,0 +1,1 @@
+export {IngredientsSharedModule } from './src/app/ingredients-shared.module';

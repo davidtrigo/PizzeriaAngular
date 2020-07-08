@@ -11,6 +11,7 @@ export class UserGuardService implements CanActivate {
   constructor(private userService: UserService, private router: Router) {
 
   }
+  
   async canActivate(route: ActivatedRouteSnapshot): Promise<boolean> {
     const user = await this.userService.get()
     const data = route.data || {}
