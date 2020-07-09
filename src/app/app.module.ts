@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
- import {UserModule} from '@pizzeria/user';
+import {UserModule} from '@pizzeria/user';
 
 
 @NgModule({

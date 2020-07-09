@@ -11,7 +11,10 @@ const routes: Routes = [
     path: 'pizzas',
     loadChildren: () => import('projects/pizzas').then(m => m.PizzasSharedModule),
   },*/
-
+  {
+    path: 'register',
+   loadChildren: () => import('projects/register').then(m => m.RegisterSharedModule),
+  },
   {
     path: 'ingredients',
     loadChildren: () => import('projects/ingredients').then(m => m.IngredientsSharedModule),

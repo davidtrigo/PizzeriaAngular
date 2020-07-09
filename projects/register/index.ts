@@ -1,0 +1,1 @@
+export { RegisterSharedModule} from './src/app/register-shared.module';
