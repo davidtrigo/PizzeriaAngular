@@ -11,6 +11,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppComponentComponent } from './app-component/app-component.component';
 
+
 @NgModule({
   declarations: [LoginComponent, AppComponentComponent],
   imports: [
