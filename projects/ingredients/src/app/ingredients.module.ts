@@ -1,7 +1,6 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { IngredientsRoutingModule } from './ingredients-routing.module';
 import { IngredientslistComponent } from './index/ingredientslist/ingredientslist.component';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -11,7 +10,6 @@ const providers = [];
   
   imports: [
     CommonModule,
-    IngredientsRoutingModule,
     BrowserModule
   
   ],

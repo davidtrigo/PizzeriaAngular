@@ -16,6 +16,10 @@ const routes: Routes = [
    loadChildren: () => import('projects/register').then(m => m.RegisterSharedModule),
   },
   {
+    path: 'login',
+   loadChildren: () => import('projects/login').then(m => m.LoginSharedModule),
+  },
+  {
     path: 'ingredients',
     loadChildren: () => import('projects/ingredients').then(m => m.IngredientsSharedModule),
     canActivate: [UserGuardService],
