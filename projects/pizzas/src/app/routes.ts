@@ -10,20 +10,16 @@ export const routes: Routes = [
     component: PizzaslistComponent
   },
   {
-    path: 'add',
+    path: 'pizzas/add',
     component: AddComponent
   },
   {
-    path: 'edit/:id',
+    path: 'pizzas/edit/:id',
     component: EditComponent
   },
 ];
 
 export const sharedRoutes: Routes = [
-  {
-    path: '',
-    component: PizzaslistComponent
-  },
   {
     path: 'add',
     component: AddComponent,
@@ -36,4 +32,9 @@ export const sharedRoutes: Routes = [
     canActivate: [UserGuardService],
     data: { role: 'admin' }
   },
+  {
+    path: '',
+    component: PizzaslistComponent
+  },
+ 
 ];
